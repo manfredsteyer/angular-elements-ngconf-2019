@@ -1,10 +1,10 @@
 import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-slideshow',
-  templateUrl: './slideshow.component.html'
+  selector: 'app-honey-slideshow',
+  templateUrl: './honey-slideshow.component.html'
 })
-export class SlideshowComponent implements OnInit {
+export class HoneySlideshowComponent implements OnInit {
   @Input() slideURL: string;
   @Input() slideTitle: string;
 
