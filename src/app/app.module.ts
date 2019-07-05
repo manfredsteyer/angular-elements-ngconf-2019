@@ -7,7 +7,6 @@ import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {APP_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
-import {NavbarComponent} from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
 import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-checkbox.module';
@@ -23,7 +22,6 @@ import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-c
    ],
    declarations: [
       AppComponent,
-      NavbarComponent,
       HomeComponent,
    ],
    providers: [],
