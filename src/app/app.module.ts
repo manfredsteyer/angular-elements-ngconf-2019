@@ -10,7 +10,6 @@ import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
-import { TabsModule } from './tab-example/tabs/tabs.module';
 import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-checkbox.module';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-c
       HttpClientModule,
       RouterModule.forRoot(APP_ROUTES),
       DashboardTileModule,
-      TabsModule,
       CustomCheckboxModule,
    ],
    declarations: [
