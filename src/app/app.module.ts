@@ -10,7 +10,6 @@ import {APP_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {SharedModule} from './shared/shared.module';
-import {SidebarComponent} from './sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
 import { TabsPageComponent } from './tab-example/tabs-page/tabs-page.component';
@@ -31,7 +30,6 @@ import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-c
    ],
    declarations: [
       AppComponent,
-      SidebarComponent,
       NavbarComponent,
       HomeComponent,
       DashboardPageComponent,
