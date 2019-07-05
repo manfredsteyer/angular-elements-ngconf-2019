@@ -1,4 +1,3 @@
-import { DashboardPageComponent } from './dashboard/dashboard-page/dashboard-page.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
@@ -11,8 +10,6 @@ import {HomeComponent} from './home/home.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
-import { TabsPageComponent } from './tab-example/tabs-page/tabs-page.component';
-import { TabsComponent } from './tab-example/tabs/tabs.component';
 import { TabsModule } from './tab-example/tabs/tabs.module';
 import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-checkbox.module';
 
@@ -30,8 +27,6 @@ import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-c
       AppComponent,
       NavbarComponent,
       HomeComponent,
-      DashboardPageComponent,
-      TabsPageComponent
    ],
    providers: [],
    schemas: [
