@@ -30,7 +30,6 @@
               "src/assets/css/themify-icons.css"
             ],
             "lazyModules": [
-              "src/app/dashboard/lazy-dashboard-tile/lazy-dashboard-tile.module"
             ],
             "scripts": [],
             "es5BrowserSupport": true
