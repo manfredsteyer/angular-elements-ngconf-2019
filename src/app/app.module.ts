@@ -9,7 +9,6 @@ import {APP_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardTileModule } from './dashboard/dashboard-tile/dashboard-tile.module';
-import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-checkbox.module';
 
 @NgModule({
    imports: [
@@ -18,7 +17,6 @@ import { CustomCheckboxModule } from './native-elements/custom-checkbox/custom-c
       HttpClientModule,
       RouterModule.forRoot(APP_ROUTES),
       DashboardTileModule,
-      CustomCheckboxModule,
    ],
    declarations: [
       AppComponent,
