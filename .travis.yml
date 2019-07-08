@@ -16,9 +16,9 @@ before_install:
   - npx --version
   - npm install -g codecov
 before_script:
-  - docker run -d -p 4444:4444 --name selenium-hub selenium/hub:3.4.0
+  - docker run -d -p 4444:4444 --name selenium-hub selenium/hub:3.5.3
   - docker run -d --name node-chrome --link selenium-hub:hub selenium/node-chrome:3.5.3
-  - docker run -d --name node-firefox --link selenium-hub:hub selenium/node-firefox:3.4.0
+  - docker run -d --name node-firefox --link selenium-hub:hub selenium/node-firefox:3.5.3
 script:
   - npm run e2e
   - codecov
