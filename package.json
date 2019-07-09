@@ -30,7 +30,7 @@
     "tslib": "^1.9.0",
     "web-animations-js": "^2.3.1",
     "zone.js": "~0.8.26",
-    "marked": "0.6.3"
+    "marked": "0.7.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
@@ -40,6 +40,7 @@
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/marked": "0.6.5",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
