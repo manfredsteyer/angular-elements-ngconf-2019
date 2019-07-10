@@ -1,0 +1,71 @@
+/* honey-slideshow */
+
+:root {
+  --slides: 1;
+}
+
+.wrap {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.slide-box {
+  display: flex;
+  position: relative;
+  left: 0;
+  width: calc( var(--slides)*100%);
+  transition: all 400ms 0s ease;
+}
+
+.slide {
+  width: calc(100% / var(--slides));
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+}
+
+slide-pagination {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  bottom: 0.3vw;
+  left: 0;
+}
+
+/* slide-arrow */
+.arrow {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  width: 3vw;
+  height: 3vw;
+  border: 2px solid;
+  border-color: #ffffff #ffffff transparent transparent;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 2.5%;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.arrow-right {
+  right: 2.5%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* slide-pagingation */
+.pagination-btn {
+  display: inline-flex;
+  width: calc(100% / var(--slides) + 4);
+  height: 2px;
+  margin: 0 0.5vw;
+  background-color: #efefef;
+  opacity: 0.3;
+}

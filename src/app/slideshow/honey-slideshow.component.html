@@ -6,6 +6,20 @@
   <div class="content">
     <button *ngIf="!this.isPresenting" (click)="compute($event)">Start Präsentation</button>
 
-    <div id="slide-frame">Präsentations View</div>
+    <div class="wrap">
+
+      <div class="arrow arrow-left" data-x="left"></div>
+      <div class="arrow arrow-right" data-x="right"></div>
+
+      <div class="slide-box">
+        <div class="slide">
+          <div id="slide-frame">Die Präsentation erscheint hier</div>
+        </div>
+      </div>
+
+      <div class="pagination-btn"></div>
+
+    </div>
+
   </div>
 </div>

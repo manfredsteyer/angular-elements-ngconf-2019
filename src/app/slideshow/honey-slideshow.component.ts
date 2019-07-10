@@ -12,7 +12,8 @@ interface Slide {
 
 @Component({
   selector: 'app-honey-slideshow',
-  templateUrl: './honey-slideshow.component.html'
+  templateUrl: './honey-slideshow.component.html',
+  styleUrls: [ './honey-slideshow.component.css']
 })
 export class HoneySlideshowComponent implements AfterViewInit {
 
