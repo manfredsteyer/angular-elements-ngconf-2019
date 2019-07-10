@@ -1,5 +1,6 @@
-import {AfterViewInit, Component, Input, Output} from '@angular/core';
+import {AfterViewInit, Component, Input, Output, SecurityContext} from '@angular/core';
 import {parse} from 'marked';
+import {DomSanitizer} from '@angular/platform-browser';
 
 
 interface Slide {
@@ -15,6 +16,13 @@ interface Slide {
 })
 export class HoneySlideshowComponent implements AfterViewInit {
 
+  protected isPresenting = false;
+
+  constructor(private sanitizer: DomSanitizer) {
+
+  }
+
+
   /**
    * [
    * {
@@ -27,6 +35,8 @@ export class HoneySlideshowComponent implements AfterViewInit {
 
 
   public compute = ($event) => {
+    this.isPresenting = true;
+
     // console.log(`slideContent${this.slides[0]['slideURL']}`);
     const fetchedData: Promise<string> = fetch(this.slides[0].slideURL)
       .then(response => {
@@ -36,10 +46,12 @@ export class HoneySlideshowComponent implements AfterViewInit {
         return response.text() as Promise<string>;
       })
       .then((data: string) => {
-        const text = parse(data);
-        console.log('###Text:>' + text + '<');
+        const htmlContent = parse(data);
+        const sanifiedHtmlContent = this.sanitizer.sanitize(SecurityContext.HTML, htmlContent);
+
+        console.log('###Text:>' + sanifiedHtmlContent + '<');
         const element: HTMLElement = document.getElementById('slide-frame');
-        element.innerHTML = text;
+        element.innerHTML = sanifiedHtmlContent;
         return data;
       });
   };

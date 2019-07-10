@@ -4,8 +4,8 @@
     <h1 class="title">Meine Präsentation</h1>
   </div>
   <div class="content">
-    <button (click)="compute($event)"> </button>
+    <button *ngIf="!this.isPresenting" (click)="compute($event)">Start Präsentation</button>
 
-    <div id="slide-frame">test</div>
+    <div id="slide-frame">Präsentations View</div>
   </div>
 </div>
