@@ -13,11 +13,12 @@ interface Slide {
 @Component({
   selector: 'app-honey-slideshow',
   templateUrl: './honey-slideshow.component.html',
-  styleUrls: [ './honey-slideshow.component.css']
+  styleUrls: ['./honey-slideshow.component.css']
 })
-export class HoneySlideshowComponent implements AfterViewInit {
+export class HoneySlideshowComponent {
 
   protected isPresenting = false;
+  protected curSlide = 0;
 
   constructor(private sanitizer: DomSanitizer) {
 
@@ -35,11 +36,28 @@ export class HoneySlideshowComponent implements AfterViewInit {
   @Input() slides: Slide[];
 
 
-  public compute = ($event) => {
+  protected nextSlide(): void {
+    if (this.curSlide >= (this.slides.length - 1)) {
+      return;
+    }
+    this.curSlide++;
+    this.compute();
+  }
+
+  protected prevSlide(): void {
+    if (this.curSlide < 1) {
+      return;
+    }
+    this.curSlide--;
+    this.compute();
+  }
+
+
+  public compute = () => {
     this.isPresenting = true;
 
     // console.log(`slideContent${this.slides[0]['slideURL']}`);
-    const fetchedData: Promise<string> = fetch(this.slides[0].slideURL)
+    const fetchedData: Promise<string> = fetch(this.slides[this.curSlide].slideURL)
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -50,18 +68,10 @@ export class HoneySlideshowComponent implements AfterViewInit {
         const htmlContent = parse(data);
         const sanifiedHtmlContent = this.sanitizer.sanitize(SecurityContext.HTML, htmlContent);
 
-        console.log('###Text:>' + sanifiedHtmlContent + '<');
         const element: HTMLElement = document.getElementById('slide-frame');
         element.innerHTML = sanifiedHtmlContent;
         return data;
       });
   };
 
-  // data for chart
-  // slides: object = {};
-
-  ngAfterViewInit() {
-
-
-  }
 }

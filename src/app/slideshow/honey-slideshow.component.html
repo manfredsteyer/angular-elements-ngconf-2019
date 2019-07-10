@@ -8,8 +8,8 @@
 
     <div class="wrap">
 
-      <div class="arrow arrow-left" data-x="left"></div>
-      <div class="arrow arrow-right" data-x="right"></div>
+      <button *ngIf="this.isPresenting" (click)="prevSlide()" class="arrow arrow-left" data-x="left"></button>
+      <button *ngIf="this.isPresenting" (click)="nextSlide()" class="arrow arrow-right" data-x="right"></button>
 
       <div class="slide-box">
         <div class="slide">
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="pagination-btn"></div>
+      <div class="pagination-btn">1</div>
 
     </div>
 
