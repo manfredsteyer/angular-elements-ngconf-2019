@@ -8,7 +8,6 @@ import {AppComponent} from './app.component';
 import {APP_ROUTES} from './app.routes';
 import {HomeComponent} from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DashboardTileModule} from './dashboard/dashboard-tile/dashboard-tile.module';
 import {HoneySlideshowModule} from './slideshow/honey-slideshow.module';
 
 @NgModule({
@@ -17,7 +16,6 @@ import {HoneySlideshowModule} from './slideshow/honey-slideshow.module';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
-    DashboardTileModule,
     HoneySlideshowModule
   ],
   declarations: [

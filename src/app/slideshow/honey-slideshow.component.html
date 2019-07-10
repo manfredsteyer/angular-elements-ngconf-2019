@@ -1,25 +1,19 @@
-<!--<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>-->
-<div class="card">
-  <div class="header">
-    <h1 class="title">Meine Präsentation</h1>
-  </div>
-  <div class="content">
-    <button *ngIf="!this.isPresenting" (click)="updateView($event)">Start Präsentation</button>
+<div class="content">
+  <button *ngIf="!this.isPresenting" (click)="updateView($event)">Start Präsentation</button>
 
-    <div class="wrap">
+  <div class="wrap">
 
-      <button *ngIf="this.isPresenting" (click)="prevSlide()" class="arrow arrow-left" data-x="left"></button>
-      <button *ngIf="this.isPresenting" (click)="nextSlide()" class="arrow arrow-right" data-x="right"></button>
+    <button *ngIf="this.isPresenting" (click)="prevSlide()" class="arrow arrow-left" data-x="left"></button>
+    <button *ngIf="this.isPresenting" (click)="nextSlide()" class="arrow arrow-right" data-x="right"></button>
 
-      <div class="slide-box">
-        <div class="slide">
-          <div id="slide-frame">Die Präsentation erscheint hier</div>
-        </div>
+    <div class="slide-box">
+      <div class="slide">
+        <div id="slide-frame">Die Präsentation erscheint hier</div>
       </div>
-
-      <div class="pagination-btn">1</div>
-
     </div>
 
+    <div class="pagination-btn">1</div>
+
   </div>
+
 </div>
