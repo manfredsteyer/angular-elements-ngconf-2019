@@ -41,7 +41,7 @@ export class HoneySlideshowComponent {
       return;
     }
     this.curSlide++;
-    this.compute();
+    this.updateView();
   }
 
   protected prevSlide(): void {
@@ -49,11 +49,11 @@ export class HoneySlideshowComponent {
       return;
     }
     this.curSlide--;
-    this.compute();
+    this.updateView();
   }
 
 
-  public compute = () => {
+  public updateView = () => {
     this.isPresenting = true;
 
     // console.log(`slideContent${this.slides[0]['slideURL']}`);
