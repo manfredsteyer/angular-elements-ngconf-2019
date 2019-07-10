@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, Output, SecurityContext} from '@angular/core';
+import {Component, Input, SecurityContext} from '@angular/core';
 import {parse} from 'marked';
 import {DomSanitizer} from '@angular/platform-browser';
 
@@ -56,7 +56,6 @@ export class HoneySlideshowComponent {
   public updateView = () => {
     this.isPresenting = true;
 
-    // console.log(`slideContent${this.slides[0]['slideURL']}`);
     const fetchedData: Promise<string> = fetch(this.slides[this.curSlide].slideURL)
       .then(response => {
         if (!response.ok) {
@@ -72,6 +71,5 @@ export class HoneySlideshowComponent {
         element.innerHTML = sanifiedHtmlContent;
         return data;
       });
-  };
-
+  }
 }
