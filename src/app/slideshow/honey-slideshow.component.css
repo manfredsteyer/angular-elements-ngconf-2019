@@ -1,71 +1,64 @@
-/* honey-slideshow */
-
-:root {
-  --slides: 1;
+body {
+  margin: 0;
 }
 
-.wrap {
-  position: relative;
+
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* The navbar container */
+.topnav {
   overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
   display: block;
-  width: 100%;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.slide-box {
-  display: flex;
-  position: relative;
-  left: 0;
-  width: calc( var(--slides)*100%);
-  transition: all 400ms 0s ease;
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.slide {
-  width: calc(100% / var(--slides));
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
 }
 
-.slide img {
-  display: block;
-  width: 100%;
+/* Left and right column */
+.column.side {
+  width: 25%;
 }
 
-slide-pagination {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  z-index: 100;
-  right: 0;
-  bottom: 0.3vw;
-  left: 0;
+/* Middle column */
+.column.middle {
+  width: 50%;
 }
 
-/* slide-arrow */
-.arrow {
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  width: 3vw;
-  height: 3vw;
-  border: 2px solid;
-  border-color: #ffffff #ffffff transparent transparent;
-  cursor: pointer;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.arrow-left {
-  left: 2.5%;
-  transform: translateY(-50%) rotate(-135deg);
-}
-
-.arrow-right {
-  right: 2.5%;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-/* slide-pagingation */
-.pagination-btn {
-  display: inline-flex;
-  width: calc(100% / var(--slides) + 4);
-  height: 2px;
-  margin: 0 0.5vw;
-  background-color: #efefef;
-  opacity: 0.3;
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 }
