@@ -13,7 +13,7 @@
 <div class="row">
 
   <div class="column side">
-    <button *ngIf="this.isPresenting" (click)="prevSlide()"  data-x="left">&lt;</button>
+    <button *ngIf="this.isPresenting" (click)="prevSlide()" class="button-left">&lt;</button>
   </div>
 
 
@@ -25,7 +25,7 @@
 
 
   <div class="column side">
-    <button *ngIf="this.isPresenting" (click)="nextSlide()"  data-x="right">&gt;</button>
+    <button *ngIf="this.isPresenting" (click)="nextSlide()"  class="button-right">&gt;</button>
   </div>
 </div>
 
