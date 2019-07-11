@@ -5,7 +5,7 @@
 
 <div class="topnav">
   <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
-    <a href="#">{{i}}</a>
+    <a  (click)="gotoSlide(i)">{{i}}</a>
   </ng-container>
 </div>
 
@@ -31,7 +31,7 @@
 
 <div class="topnav">
   <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
-    <a href="#">{{i}}</a>
+    <a  (click)="gotoSlide(i)">{{i}}</a>
   </ng-container>
 </div>
 

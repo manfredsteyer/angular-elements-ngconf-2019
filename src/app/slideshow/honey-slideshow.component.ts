@@ -36,6 +36,14 @@ export class HoneySlideshowComponent {
   @Input() slides: Slide[];
 
 
+  protected gotoSlide(index): void {
+    if (index < 0 || index > (this.slides.length - 1)) {
+      return;
+    }
+    this.curSlide = index;
+    this.updateView();
+  }
+
   protected nextSlide(): void {
     if (this.curSlide >= (this.slides.length - 1)) {
       return;
@@ -71,5 +79,5 @@ export class HoneySlideshowComponent {
         element.innerHTML = sanifiedHtmlContent;
         return data;
       });
-  }
+  };
 }
