@@ -13,7 +13,7 @@ export class HomeComponent {
       audioURL: 'slide1.mp3'
     }
     , {
-      slideURL: 'https://raw.githubusercontent.com/FunThomas424242/vorschaubilder.analyse/master/vermutungen.md',
+      slideURL: 'https://raw.githubusercontent.com/FunThomas424242/jar-install-plugin/master/CHANGES.md',
       audioURL: 'slide2.mp3'
     }
   ];
