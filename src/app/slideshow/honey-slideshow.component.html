@@ -1,16 +1,16 @@
-<div class="header">
+<header class="header">
   <h1 id="titel">Präsentation</h1>
-</div>
+</header>
 
 
-<div class="topnav">
+<nav title="Kopfzeilen Navigation" class="topnav">
   <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
     <a  (click)="gotoSlide(i)">{{i}}</a>
   </ng-container>
-</div>
+</nav>
 
 
-<div class="row">
+<main class="row">
 
   <div class="column side">
     <button *ngIf="this.isPresenting" (click)="prevSlide()" class="button-left">&lt;</button>
@@ -27,13 +27,13 @@
   <div class="column side">
     <button *ngIf="this.isPresenting" (click)="nextSlide()"  class="button-right">&gt;</button>
   </div>
-</div>
+</main>
 
-<div class="topnav">
+<nav title="Fußzeilen Navigation" class="topnav">
   <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
     <a  (click)="gotoSlide(i)">{{i}}</a>
   </ng-container>
-</div>
+</nav>
 
 
 
