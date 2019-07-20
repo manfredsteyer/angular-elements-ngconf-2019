@@ -21,8 +21,14 @@ describe('workspace-project App', () => {
 
   function prepareAxeTests() {
     // Auf ausstehende ticks warten
-    browser.pause(50);
-    browser.executeScript(axe.source);
+    browser.waitForAngular()
+      .then(() => {
+        browser.executeScript(axe.source);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
   }
 
   async function pruefeBarrierefreiheit(): Promise<AxeResults> {
