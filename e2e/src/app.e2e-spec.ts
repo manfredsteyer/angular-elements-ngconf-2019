@@ -1,15 +1,13 @@
 import {AppPage} from './app.po';
 import {browser, logging} from 'protractor';
 import * as axe from 'axe-core';
-import * as assert from 'assert';
 import {AxeResults} from 'axe-core';
-import {throws} from 'assert';
-import any = jasmine.any;
+import * as assert from 'assert';
 
 describe('workspace-project App', () => {
   let page: AppPage;
 
-  async function printAxeRuleSet() {
+  async function printAxeRuleSet(): Promise<void> {
 
     // @ts-ignore
     const ruleSet: string = await browser.executeAsyncScript((resolve: any) => {
@@ -19,7 +17,7 @@ describe('workspace-project App', () => {
     console.log('### Ruleset:' + ruleSet);
   }
 
-  function prepareAxeTests() {
+  function prepareAxeTests(): void {
     // Auf ausstehende ticks warten
     browser.waitForAngular()
       .then(() => {
@@ -49,6 +47,7 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
+    printAxeRuleSet();
   });
 
   it('should display welcome message', () => {
@@ -60,7 +59,6 @@ describe('workspace-project App', () => {
 
     page.navigateTo();
     prepareAxeTests();
-    // printAxeRuleSet();
     const results = await pruefeBarrierefreiheit();
     assert.equal(results.violations.length, 0,
       `Axe: Folgende ${results.violations.length} Fehler gefunden: ${JSON.stringify(results.violations, null, 1)}`
@@ -70,9 +68,7 @@ describe('workspace-project App', () => {
   it('Prüfe Barrierefreiheit nach Aktion', async () => {
     page.navigateTo();
     await page.clickPraesentationButton();
-    // browser.pause(500);
     prepareAxeTests();
-    // printAxeRuleSet();
     const results = await pruefeBarrierefreiheit();
     assert.equal(results.violations.length, 0,
       `Axe: Folgende ${results.violations.length} Fehler gefunden: ${JSON.stringify(results.violations, null, 1)}`
