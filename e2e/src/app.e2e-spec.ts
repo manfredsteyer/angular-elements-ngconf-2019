@@ -47,10 +47,9 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
-    printAxeRuleSet();
   });
 
-  it('should display welcome message', () => {
+  it('Überprüfung des Titeltextes', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Präsentation');
   });
@@ -82,5 +81,10 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     } as logging.Entry));
+  });
+
+  afterAll(() => {
+    // Es sollte reichen das Ruleset 1x auszugeben
+    printAxeRuleSet();
   });
 });
