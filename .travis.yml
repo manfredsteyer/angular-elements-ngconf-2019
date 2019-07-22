@@ -19,7 +19,6 @@ before_script:
   - ng build --prod
   - ng build --prod --single-bundle
 script:
-  - npm run test
   - npm run e2e
   - codecov
 after_script:
