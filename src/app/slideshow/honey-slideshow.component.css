@@ -1,3 +1,6 @@
+@import '../../../src/assets/css/bootstrap.min.css';
+@import '../../../src/assets/css/paper-dashboard.css';
+
 body {
   margin: 0;
 }
@@ -47,6 +50,10 @@ body {
 /* Middle column */
 .column.middle {
   width: 90%;
+}
+
+a:link {
+  colore: 'gray' !important;
 }
 
 /* Clear floats after the columns */
