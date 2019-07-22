@@ -29,8 +29,7 @@
               "src/assets/css/demo.css",
               "src/assets/css/themify-icons.css"
             ],
-            "lazyModules": [
-            ],
+            "lazyModules": [],
             "scripts": [],
             "es5BrowserSupport": true
           },
