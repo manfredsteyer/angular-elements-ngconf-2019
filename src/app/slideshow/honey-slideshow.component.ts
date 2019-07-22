@@ -17,7 +17,7 @@ interface Slide {
 })
 export class HoneySlideshowComponent {
 
-  protected isPresenting = false;
+  isPresenting = false;
   protected curSlide = 0;
 
   constructor(private sanitizer: DomSanitizer) {

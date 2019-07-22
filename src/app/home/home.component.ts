@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class HomeComponent {
 
-  protected SLIDES = [
+   SLIDES = [
     {
       slideURL: 'https://raw.githubusercontent.com/FunThomas424242/angular-webcomponents.template/master/README.md',
       audioURL: 'slide1.mp3'
