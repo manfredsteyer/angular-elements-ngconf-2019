@@ -1,40 +1,38 @@
-<header class="header">
-  <h1 id="titel">Präsentation</h1>
-</header>
+<div class="wrapper">
+  <header class="header">
+    <h1 id="titel">Präsentation</h1>
+  </header>
 
 
-<nav title="Kopfzeilen Navigation" class="topnav">
-  <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
-    <a  (click)="gotoSlide(i)">{{i}}</a>
-  </ng-container>
-</nav>
+  <nav title="Kopfzeilen Navigation" class="topnav">
+    <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
+      <a (click)="gotoSlide(i)">{{i}}</a>
+    </ng-container>
+  </nav>
 
 
-<main class="row">
+  <main class="row">
 
-  <div class="column side">
-    <button *ngIf="this.isPresenting" (click)="prevSlide()" class="button-left">&lt;</button>
-  </div>
-
-
-  <div class="column middle">
-    <div id="slide-frame">
-      <button id="start-praesentation"*ngIf="!this.isPresenting" (click)="updateView()">Start Präsentation</button>
+    <div class="column side">
+      <button *ngIf="this.isPresenting" (click)="prevSlide()" class="button-left">&lt;</button>
     </div>
-  </div>
 
 
-  <div class="column side">
-    <button *ngIf="this.isPresenting" (click)="nextSlide()"  class="button-right">&gt;</button>
-  </div>
-</main>
-
-<nav title="Fußzeilen Navigation" class="topnav">
-  <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
-    <a  (click)="gotoSlide(i)">{{i}}</a>
-  </ng-container>
-</nav>
+    <div class="column middle">
+      <div id="slide-frame">
+        <button id="start-praesentation" *ngIf="!this.isPresenting" (click)="updateView()">Start Präsentation</button>
+      </div>
+    </div>
 
 
+    <div class="column side">
+      <button *ngIf="this.isPresenting" (click)="nextSlide()" class="button-right">&gt;</button>
+    </div>
+  </main>
 
-
+  <nav title="Fußzeilen Navigation" class="topnav">
+    <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
+      <a (click)="gotoSlide(i)">{{i}}</a>
+    </ng-container>
+  </nav>
+</div>

@@ -5,11 +5,18 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  max-height: 600px;
+  overflow: hidden;
+}
 
 .header {
   background-color: #F1F1F1;
   text-align: center;
-  padding: 20px;
+}
+
+.header > h1 {
+  margin: 0px 0px 0px 0px;
 }
 
 
@@ -50,10 +57,8 @@ body {
 /* Middle column */
 .column.middle {
   width: 90%;
-}
-
-a:link {
-  colore: 'gray' !important;
+  max-height: 450px;
+  overflow: hidden;
 }
 
 /* Clear floats after the columns */
