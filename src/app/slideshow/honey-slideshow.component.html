@@ -7,7 +7,7 @@
   <nav title="Kopfzeilen Navigation" class="topnav">
     <a *ngIf="this.isPresenting" (click)="prevSlide()">&lt;</a>
     <a *ngIf="this.isPresenting" (click)="nextSlide()">&gt;</a>
-    <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
+    <ng-container *ngFor="let slide of this.getSlides(); let i = index" [attr.data-index]="i">
       <a (click)="gotoSlide(i)">{{i}}</a>
     </ng-container>
   </nav>
@@ -28,7 +28,7 @@
   <nav title="Fußzeilen Navigation" class="topnav">
     <a *ngIf="this.isPresenting" (click)="prevSlide()">&lt;</a>
     <a *ngIf="this.isPresenting" (click)="nextSlide()">&gt;</a>
-    <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
+    <ng-container *ngFor="let slide of this.getSlides(); let i = index" [attr.data-index]="i">
       <a (click)="gotoSlide(i)">{{i}}</a>
     </ng-container>
   </nav>

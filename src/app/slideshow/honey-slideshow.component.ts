@@ -3,9 +3,10 @@ import {parse} from 'marked';
 import {DomSanitizer} from '@angular/platform-browser';
 
 
-interface Slide {
+export interface Slide {
 
   slideURL;
+  audioURL;
 
 }
 
@@ -34,6 +35,9 @@ export class HoneySlideshowComponent {
 
   }
 
+  public getSlides(): Slide[] {
+    return this.slides;
+  }
 
   protected gotoSlide(index): void {
     if (index < 0 || index > (this.slides.length - 1)) {
@@ -60,7 +64,7 @@ export class HoneySlideshowComponent {
   }
 
 
-  public updateView = () => {
+  public updateView(): void {
     this.isPresenting = true;
 
     const fetchedData: Promise<string> = fetch(this.slides[this.curSlide].slideURL)
@@ -77,6 +81,8 @@ export class HoneySlideshowComponent {
         const element: HTMLElement = document.getElementById('slide-frame');
         element.innerHTML = sanifiedHtmlContent;
         return data;
+      }).catch(() => {
+        throw new Error('das sollte nixe passieren');
       });
-  };
+  }
 }

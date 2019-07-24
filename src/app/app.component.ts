@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {HoneySlideshowComponent, Slide} from './slideshow/honey-slideshow.component';
 
 @Component({
   selector: 'flight-app',
@@ -6,7 +7,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  SLIDES = [
+
+  static SLIDES: Slide[] = [
     {
       slideURL: 'https://raw.githubusercontent.com/FunThomas424242/angular-webcomponents.template/master/README.md',
       audioURL: 'slide1.mp3'
@@ -18,6 +20,10 @@ export class AppComponent {
   ];
 
   constructor() {
+  }
+
+  public getSlides(): Slide[] {
+    return AppComponent.SLIDES;
   }
 }
 
