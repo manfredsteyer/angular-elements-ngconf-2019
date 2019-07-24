@@ -20,11 +20,6 @@ export class HoneySlideshowComponent {
   isPresenting = false;
   protected curSlide = 0;
 
-  constructor(private sanitizer: DomSanitizer) {
-
-  }
-
-
   /**
    * [
    * {
@@ -34,6 +29,10 @@ export class HoneySlideshowComponent {
    * ]
    */
   @Input() slides: Slide[];
+
+  constructor(private sanitizer: DomSanitizer) {
+
+  }
 
 
   protected gotoSlide(index): void {
