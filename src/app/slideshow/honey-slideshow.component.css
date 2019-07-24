@@ -1,10 +1,6 @@
 @import '../../../src/assets/css/bootstrap.min.css';
 @import '../../../src/assets/css/paper-dashboard.css';
 
-body {
-  margin: 0;
-}
-
 .wrapper {
   max-height: 600px;
   overflow: hidden;
@@ -49,16 +45,16 @@ body {
   padding: 10px;
 }
 
-/* Left and right column */
-.column.side {
-  width: 5%;
-}
 
 /* Middle column */
 .column.middle {
-  width: 90%;
+  width: 100%;
   max-height: 450px;
   overflow: hidden;
+}
+
+.row {
+  margin: 0px 10px 0px 10px;
 }
 
 /* Clear floats after the columns */

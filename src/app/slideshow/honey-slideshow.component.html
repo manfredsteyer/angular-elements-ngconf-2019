@@ -5,6 +5,8 @@
 
 
   <nav title="Kopfzeilen Navigation" class="topnav">
+    <a *ngIf="this.isPresenting" (click)="prevSlide()">&lt;</a>
+    <a *ngIf="this.isPresenting" (click)="nextSlide()">&gt;</a>
     <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
       <a (click)="gotoSlide(i)">{{i}}</a>
     </ng-container>
@@ -12,10 +14,6 @@
 
 
   <main class="row">
-
-    <div class="column side">
-      <button *ngIf="this.isPresenting" (click)="prevSlide()" class="button-left">&lt;</button>
-    </div>
 
 
     <div class="column middle">
@@ -25,12 +23,11 @@
     </div>
 
 
-    <div class="column side">
-      <button *ngIf="this.isPresenting" (click)="nextSlide()" class="button-right">&gt;</button>
-    </div>
   </main>
 
   <nav title="Fußzeilen Navigation" class="topnav">
+    <a *ngIf="this.isPresenting" (click)="prevSlide()">&lt;</a>
+    <a *ngIf="this.isPresenting" (click)="nextSlide()">&gt;</a>
     <ng-container *ngFor="let slide of slides; let i = index" [attr.data-index]="i">
       <a (click)="gotoSlide(i)">{{i}}</a>
     </ng-container>
