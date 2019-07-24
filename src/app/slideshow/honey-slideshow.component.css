@@ -38,16 +38,10 @@
   color: black;
 }
 
-
-/* Create three unequal columns that floats next to each other */
-.column {
+/* Middle column */
+.middle {
   float: left;
   padding: 10px;
-}
-
-
-/* Middle column */
-.column.middle {
   width: 100%;
   max-height: 450px;
   overflow: hidden;
@@ -71,10 +65,3 @@
   }
 }
 
-.button-left {
-  float: right;
-}
-
-.button-right {
-  float: left;
-}
