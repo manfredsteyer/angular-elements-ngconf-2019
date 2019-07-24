@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
+import {AppComponent} from './app.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -9,7 +9,7 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: AppComponent
   },
   {
     path: '**',
