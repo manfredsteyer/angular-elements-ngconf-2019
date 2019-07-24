@@ -72,7 +72,3 @@ import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
 if (!window['customElements']) {
   document.write(`<script src="/assets/webcomponentsjs/webcomponents-loader.js"></script>`);
 }
-
-
-import '@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js';
-import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
