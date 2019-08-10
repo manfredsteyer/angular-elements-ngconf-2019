@@ -36,7 +36,11 @@ export class HoneySlideshowComponent {
   }
 
   public getSlides(): Slide[] {
-    return this.slides;
+    if (this.slides) {
+      return this.slides;
+    } else {
+      return [];
+    }
   }
 
   protected gotoSlide(index): void {
