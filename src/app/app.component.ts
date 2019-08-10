@@ -8,7 +8,7 @@ import {HoneySlideshowComponent, Slide} from './slideshow/honey-slideshow.compon
 })
 export class AppComponent {
 
-  static SLIDES: Slide[] = [
+ public SLIDES: Slide[] = [
     {
       slideURL: 'https://raw.githubusercontent.com/FunThomas424242/angular-webcomponents.template/master/README.md',
       audioURL: 'slide1.mp3'
@@ -22,8 +22,6 @@ export class AppComponent {
   constructor() {
   }
 
-  public getSlides(): Slide[] {
-    return AppComponent.SLIDES;
-  }
+
 }
 
