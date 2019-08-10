@@ -1,4 +1,4 @@
-import {Component, Input, SecurityContext} from '@angular/core';
+import {AfterViewInit, Component, Input, SecurityContext} from '@angular/core';
 import {parse} from 'marked';
 import {DomSanitizer} from '@angular/platform-browser';
 
@@ -35,8 +35,12 @@ export class HoneySlideshowComponent {
 
   }
 
+  protected getCurrentSlide(): number {
+    return this.curSlide;
+  }
+
   public getSlides(): Slide[] {
-    if (this.slides) {
+    if (this.isPresenting) {
       return this.slides;
     } else {
       return [];
@@ -52,7 +56,7 @@ export class HoneySlideshowComponent {
   }
 
   protected nextSlide(): void {
-    if (this.curSlide >= (this.slides.length - 1)) {
+    if (this.getCurrentSlide() >= (this.slides.length - 1)) {
       return;
     }
     this.curSlide++;
@@ -60,7 +64,7 @@ export class HoneySlideshowComponent {
   }
 
   protected prevSlide(): void {
-    if (this.curSlide < 1) {
+    if (this.getCurrentSlide() < 1) {
       return;
     }
     this.curSlide--;
