@@ -35,7 +35,7 @@ export class HoneySlideshowComponent {
 
   }
 
-  protected getCurrentSlide(): number {
+  public getCurrentSlide(): number {
     return this.curSlide;
   }
 

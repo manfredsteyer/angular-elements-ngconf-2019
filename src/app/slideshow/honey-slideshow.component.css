@@ -38,6 +38,12 @@
   color: black;
 }
 
+/* Links - change background color on current element */
+.current {
+  background-color: lightskyblue;
+  color: black !important;
+}
+
 /* Middle column */
 .middle {
   float: left;
