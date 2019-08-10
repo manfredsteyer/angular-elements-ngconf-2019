@@ -93,4 +93,8 @@ export class HoneySlideshowComponent {
         throw new Error('das sollte nixe passieren');
       });
   }
+
+  public getNavClass(slideIndex: number): string {
+    return this.getCurrentSlide() === slideIndex ? 'current' : 'notcurrent';
+  }
 }
