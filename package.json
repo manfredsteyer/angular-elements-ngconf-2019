@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.0",
+    "@angular/cdk": "^9.0.0",
     "@angular/common": "~9.0.0",
     "@angular/compiler": "~9.0.0",
     "@angular/core": "~9.0.0",
@@ -20,7 +21,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
-    "@swimlane/ngx-charts": "^10.1.0",
+    "@swimlane/ngx-charts": "^13.0.2",
     "@webcomponents/webcomponentsjs": "^2.2.9",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
