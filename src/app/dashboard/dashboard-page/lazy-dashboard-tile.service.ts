@@ -14,13 +14,12 @@ export class LazyDashboardTileService  {
     private moduleRef: NgModuleRef<any>;
 
     load(): Promise<void> {
-        
         if (this.moduleRef) {
             return Promise.resolve();
         }
 
         const path = 'src/app/dashboard/lazy-dashboard-tile/lazy-dashboard-tile.module#LazyDashboardTileModule';
-        
+
         return this
             .loader
             .load(path)
